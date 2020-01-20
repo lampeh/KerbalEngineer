@@ -75,7 +75,7 @@ namespace KerbalEngineer.Flight.Readouts.Orbital
 
                 if (Double.IsNaN(time))
                 {
-                    str = "---s";
+                    str = String.Empty;
                     //log.buf.AppendLine("time is NaN");
                 }
                 else
@@ -86,12 +86,12 @@ namespace KerbalEngineer.Flight.Readouts.Orbital
             }
             else
             {
-                str = "---s";
+                str = String.Empty;
                 //log.buf.AppendLine("no atmosphere, pe > atmosphere, or ap < atmosphere");
             }
 
             //log.Flush();
-            this.DrawLine(str, section.IsHud);
+            if (str.Length > 0) this.DrawLine(str, section.IsHud);
         }
 
         #endregion
