@@ -36,7 +36,7 @@ namespace KerbalEngineer.Flight.Readouts.Vessel
 
         public override void Draw(Unity.Flight.ISectionModule section)
         {
-            if (SimulationProcessor.ShowDetails == false || StageManager.Instance == null)
+            if (SimulationProcessor.ShowDetails == false || StageManager.Instance == null || SimulationProcessor.LastStage.thrust == 0)
             {
                 return;
             }
