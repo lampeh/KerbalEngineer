@@ -46,7 +46,7 @@ namespace KerbalEngineer.Flight.Readouts.Vessel
 
         public override void Draw(Unity.Flight.ISectionModule section)
         {
-            if (!SimulationProcessor.ShowDetails || !Surface.ImpactProcessor.ShowDetails) {
+            if (!SimulationProcessor.ShowDetails || !Surface.ImpactProcessor.ShowDetails || Surface.ImpactProcessor.SuicideDeltaV == 0) {
                 return;
             }
 
